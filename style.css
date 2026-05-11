@@ -1,0 +1,955 @@
+/* Custom Properties / Desain Token */
+:root {
+    --primary-color: #064283; /* Biru gelap utama (Bank Logo, Title, Button) */
+    --primary-hover: #053366;
+    --bg-color: #f6f8fa; /* Background utama abu terang */
+    --card-bg: #ffffff;
+    --text-dark: #334155;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --input-bg: #f8fafc;
+    --footer-card-bg: #f1f5f9;
+    --focus-ring: rgba(6, 66, 131, 0.15);
+}
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    /* Membuat tekstur dot pattern yang sangat halus dan premium */
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-dark);
+    position: relative;
+}
+
+/* Layout Wrapper Utama */
+.login-wrapper {
+    width: 100%;
+    max-width: 440px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Kartu Login Utama */
+.login-card {
+    width: 100%;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.login-card-body {
+    padding: 40px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo Estetika Bersarang */
+.logo-wrapper {
+    margin-bottom: 24px;
+}
+
+.logo-outer {
+    width: 80px;
+    height: 80px;
+    background-color: #f1f5f9;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-inner {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Teks Judul dan Subjudul */
+.login-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.login-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+/* Form Styles */
+#form-login {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.label-row label {
+    margin-bottom: 0;
+}
+
+.forgot-password {
+    font-size: 13px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Input Fields dengan Ikon */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    font-family: inherit;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: var(--card-bg);
+    box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+.input-wrapper input::placeholder {
+    color: #94a3b8;
+}
+
+/* Tombol Submit */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 24px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Footer Card (Bagian Abu-Abu di Dalam Kartu) */
+.login-card-footer {
+    background-color: var(--footer-card-bg);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-logo-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    /* Efek metalik seperti pada gambar */
+    background: radial-gradient(circle at 30% 30%, #f8fafc, #94a3b8);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-card-footer span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* Informasi Sistem Bawah (Luar Kartu) */
+.system-info {
+    text-align: center;
+}
+
+.school-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.system-desc {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* Tombol Floating Bantuan (?) */
+.help-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.help-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.help-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* =========================================
+   ADMIN DASHBOARD STYLES
+   ========================================= */
+
+/* Variabel Admin Dashboard (Warna presisi sesuai referensi image) */
+:root {
+    --navy-blue: #064283;
+    --navy-hover: #053366;
+    --green-text: #10B981;
+    --green-bg: #D1FAE5;
+    --red-text: #EF4444;
+    --red-bg: #FEE2E2;
+    --orange-text: #F59E0B;
+    --orange-bg: #FEF3C7;
+    --blue-text: #3B82F6;
+    --blue-bg: #DBEAFE;
+    --sidebar-text: #94A3B8;
+    --border-soft: #E2E8F0;
+}
+
+/* Override body khusus halaman admin */
+body#page-admin {
+    background-color: var(--bg-color);
+    background-image: none; /* Hapus dot pattern login */
+    margin: 0;
+    padding: 0;
+    display: block; 
+    overflow-x: hidden;
+}
+
+/* Layout Flex Utama */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* --- 1. SIDEBAR NAVY KIRI --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--navy-blue);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #fff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+.sidebar-header {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 20px 0;
+    overflow-y: auto;
+}
+
+.sidebar-nav ul { list-style: none; }
+
+.sidebar-nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li.active a {
+    background-color: var(--navy-hover);
+    color: #fff;
+}
+
+.sidebar-nav ul li.active a {
+    border-left-color: var(--blue-text);
+}
+
+.nav-icon { width: 20px; height: 20px; }
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--navy-hover);
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-name { font-size: 13px; font-weight: 600; color: #fff; }
+.admin-role { font-size: 11px; color: var(--sidebar-text); }
+
+.btn-logout {
+    padding: 6px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #FCA5A5;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-logout svg {
+    width: 14px;
+    height: 14px;
+}
+
+.btn-logout:hover {
+    background-color: var(--red-text);
+    color: #fff;
+}
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* --- 2. KONTEN UTAMA KANAN --- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; 
+}
+
+/* Topbar Header */
+.topbar {
+    height: 80px;
+    background-color: var(--bg-color);
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.page-titles h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 4px;
+}
+
+.page-titles p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-bell {
+    position: relative;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.btn-bell:hover { background-color: var(--border-soft); color: var(--text-dark); }
+.btn-bell svg { width: 24px; height: 24px; }
+
+.bell-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--red-text);
+    border-radius: 50%;
+    border: 2px solid var(--bg-color);
+}
+
+.topbar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Area Isi */
+.content-area {
+    padding: 32px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* 4 Summary Cards (Menggunakan CSS Grid) */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.summary-card {
+    background-color: var(--card-bg);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: transform 0.2s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-box svg { width: 24px; height: 24px; }
+.bg-green-soft { background-color: var(--green-bg); color: var(--green-text); }
+.bg-red-soft { background-color: var(--red-bg); color: var(--red-text); }
+.bg-blue-soft { background-color: var(--blue-bg); color: var(--navy-blue); }
+.bg-orange-soft { background-color: var(--orange-bg); color: var(--orange-text); }
+
+.card-details { flex: 1; }
+
+.card-details h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.card-details .card-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.card-details .card-trend {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.text-green { color: var(--green-text); font-weight: 600; }
+.text-red { color: var(--red-text); font-weight: 600; }
+.text-orange { color: var(--orange-text); font-weight: 600; }
+
+/* Grid Bawah: Form (Kiri) & Tabel (Kanan) */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 24px;
+}
+
+.panel {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-soft);
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.panel-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy-blue);
+}
+
+.panel-header p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.panel-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-primary {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy-blue);
+    text-decoration: none;
+}
+
+.link-primary:hover { text-decoration: underline; }
+
+.panel-body { padding: 24px; }
+
+/* FORM TRANSAKSI STYLES */
+.form-group { margin-bottom: 16px; }
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.text-danger { color: var(--red-text); }
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+}
+
+.input-control:focus {
+    outline: none;
+    border-color: var(--navy-blue);
+    background-color: var(--card-bg);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+select.input-control {
+    appearance: none;
+    padding-right: 32px;
+}
+
+.input-container::after {
+    content: "▼";
+    font-size: 10px;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.input-container.no-arrow::after { display: none; }
+
+.prefix-rp {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.pl-rp { padding-left: 40px !important; }
+
+textarea.input-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.upload-box {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    background-color: var(--input-bg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.upload-box:hover {
+    border-color: var(--navy-blue);
+    background-color: var(--blue-bg);
+}
+
+.upload-box svg { width: 32px; height: 32px; color: var(--text-muted); margin-bottom: 8px; }
+.upload-box h4 { font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+.upload-box p { font-size: 12px; color: var(--text-muted); }
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-cancel, .btn-save {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cancel {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+.btn-cancel:hover { background-color: var(--bg-color); }
+
+.btn-save {
+    background-color: var(--navy-blue);
+    border: 1px solid var(--navy-blue);
+    color: #fff;
+}
+
+.btn-save:hover { background-color: var(--navy-hover); }
+
+/* TABEL TRANSAKSI STYLES */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background-color: var(--navy-blue);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    padding: 14px 24px;
+}
+
+.data-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-soft);
+    vertical-align: middle;
+}
+
+.data-table tr:hover { background-color: #F8FAFC; }
+
+.td-date { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+.td-date span { font-weight: 400; color: var(--text-muted); }
+
+.td-desc h4 { font-size: 14px; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+.td-desc p { font-size: 12px; color: var(--text-muted); }
+
+.td-amount { font-size: 14px; }
+.text-right { text-align: right; }
+
+/* PAGINASI */
+.pagination-wrapper {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-soft);
+}
+
+.page-info { font-size: 13px; color: var(--text-muted); }
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.page-item {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.page-item:hover { background-color: var(--border-soft); }
+.page-item.active { background-color: var(--navy-blue); color: #fff; font-weight: 600; }
+.page-dots { color: var(--text-muted); padding: 0 4px; }
+/* SPP MANAJEMEN STYLES */
+.header-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.btn-primary { background-color: var(--navy-blue); color: #fff; border: none; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background-color 0.2s; }
+.btn-primary:hover { background-color: var(--navy-hover); }
+
+.filter-bar { display: flex; gap: 16px; background-color: var(--card-bg); padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03); border: 1px solid var(--border-soft); margin-bottom: 24px; align-items: center; }
+.search-box { flex: 1; position: relative; }
+.search-box input { width: 100%; padding: 12px 16px 12px 40px; border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--input-bg); font-size: 14px; color: var(--text-dark); transition: all 0.2s; font-family: inherit; }
+.search-box input:focus { outline: none; border-color: var(--navy-blue); background-color: var(--card-bg); box-shadow: 0 0 0 3px var(--focus-ring); }
+.search-box svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 18px; height: 18px; }
+
+.filter-select { padding: 12px 36px 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--input-bg); font-size: 14px; color: var(--text-dark); appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; transition: all 0.2s; cursor: pointer; font-family: inherit; }
+.filter-select:focus { outline: none; border-color: var(--navy-blue); }
+
+.btn-secondary { background-color: var(--input-bg); color: var(--text-dark); border: 1px solid var(--border-color); padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s; font-family: inherit; }
+.btn-secondary:hover { background-color: var(--border-soft); }
+
+.td-student { display: flex; flex-direction: column; }
+.td-student h4 { font-size: 14px; font-weight: 600; color: var(--navy-blue); margin-bottom: 4px; }
+.td-student p { font-size: 12px; color: var(--text-muted); }
+.td-class { font-size: 14px; font-weight: 500; color: var(--text-dark); }
+.td-month { font-size: 14px; color: var(--text-dark); }
+/* TRANSAKSI BARU STYLES */
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--navy-blue); }
+.breadcrumb .separator { font-size: 10px; }
+.breadcrumb .current { color: var(--navy-blue); font-weight: 600; }
+
+.page-header-back { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.btn-back { background: none; border: none; color: var(--navy-blue); cursor: pointer; display: flex; justify-content: center; align-items: center; padding: 8px; border-radius: 8px; transition: background-color 0.2s; margin-left: -8px; }
+.btn-back:hover { background-color: var(--blue-bg); }
+
+.alert-info { background-color: var(--blue-bg); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; margin-top: 24px; }
+.alert-info svg { color: var(--blue-text); flex-shrink: 0; margin-top: 2px; }
+.alert-info p { font-size: 13px; color: var(--navy-blue); line-height: 1.6; margin: 0; }
+.alert-info strong { font-weight: 700; }
+
+.panel-centered { max-width: 600px; margin: 0 auto; width: 100%; }
+/* LAPORAN KEUANGAN STYLES */
+.summary-grid.three-cols { grid-template-columns: repeat(3, 1fr); }
+.chart-card { background-color: var(--card-bg); border-radius: 16px; padding: 24px; border: 1px solid var(--border-soft); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03); display: flex; flex-direction: column; height: 100%; }
+.chart-card h3 { font-size: 16px; font-weight: 600; color: var(--navy-blue); margin-bottom: 16px; }
+.chart-legend { display: flex; gap: 16px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.chart-legend-item { display: flex; align-items: center; gap: 6px; }
+.chart-legend-color { width: 10px; height: 10px; border-radius: 50%; }
+
+.chart-placeholder { height: 200px; border-bottom: 1px solid var(--border-soft); display: flex; align-items: flex-end; justify-content: space-between; padding-bottom: 8px; position: relative; margin-top: auto; }
+.chart-bar-group { display: flex; gap: 4px; align-items: flex-end; height: 100%; width: 18%; justify-content: center; }
+.chart-bar { width: 12px; border-radius: 4px 4px 0 0; min-height: 10%; }
+.chart-labels { display: flex; justify-content: space-between; margin-top: 12px; font-size: 12px; color: var(--text-muted); padding: 0 16px; }
+
+.source-item { margin-bottom: 24px; }
+.source-header { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark); }
+.progress-track { width: 100%; height: 8px; background-color: var(--border-soft); border-radius: 4px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 4px; }
+.link-center { display: block; text-align: center; font-size: 14px; font-weight: 600; color: var(--navy-blue); text-decoration: none; margin-top: auto; padding-top: 16px; }
+.link-center:hover { text-decoration: underline; }
+
+.filter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: flex-end; background-color: var(--card-bg); padding: 20px; border-radius: 16px; border: 1px solid var(--border-soft); margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03); }
+.filter-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
+/* PENGATURAN STYLES */
+.settings-container { max-width: 900px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; gap: 24px; }
+.btn-danger { background-color: var(--red-text); color: #fff; border: none; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background-color 0.2s; font-family: inherit; }
+.btn-danger:hover { background-color: #dc2626; }
+.btn-outline { background-color: transparent; color: var(--navy-blue); border: 1px dashed var(--navy-blue); padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; font-family: inherit; width: 100%; }
+.btn-outline:hover { background-color: var(--blue-bg); }
+.settings-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.danger-zone-title { color: var(--red-text); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.settings-section-header { margin-bottom: 24px; border-bottom: 1px solid var(--border-soft); padding-bottom: 16px; }
+.settings-section-header h2 { font-size: 18px; font-weight: 700; color: var(--navy-blue); margin-bottom: 4px; }
+.settings-section-header p { font-size: 14px; color: var(--text-muted); }
+.action-buttons { display: flex; gap: 12px; }
+
+/* RESPONSIVE DESAIN (KHUSUS DASHBOARD) */
+@media (max-width: 1280px) {
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1024px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* TOMBOL SUCCESS KHUSUS SISWA */
+.btn-success {
+    background-color: var(--green-text);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+    font-family: inherit;
+}
+.btn-success:hover {
+    background-color: #059669; /* emerald-600 */
+}
