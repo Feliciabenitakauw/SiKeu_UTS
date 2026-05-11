@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Keuangan - SiKeu Sekolah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="page-kepsek">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a href="kepsek.html" class="sidebar-header" style="text-decoration: none; color: inherit;">
+                <div class="logo-outer" style="width: 40px; height: 40px; border-radius: 8px;">
+                    <div class="logo-inner" style="width: 28px; height: 28px; border-radius: 6px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path></svg>
+                    </div>
+                </div>
+                <h2>SiKeu Sekolah</h2>
+            </a>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="kepsek.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path></svg>
+                            Dashboard Utama
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="laporan.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm-96,16a32,32,0,1,1-32,32A32,32,0,0,1,120,56ZM192,184H48V168c0-22.09,26.86-40,60-40a25.26,25.26,0,0,1,12,3,25.26,25.26,0,0,1,12-3c33.14,0,60,17.91,60,40Z"></path></svg>
+                            Laporan Keuangan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="statistik.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM88,144a16,16,0,1,1,16-16A16,16,0,0,1,88,144Z"></path></svg>
+                            Statistik
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <img src="https://ui-avatars.com/api/?name=Ahmad+Dahlan&background=3B82F6&color=fff" alt="Avatar" class="admin-avatar">
+                    <div class="admin-info">
+                        <span class="admin-name">Ahmad Dahlan</span>
+                        <span class="admin-role">Kepala Sekolah</span>
+                    </div>
+                </div>
+                <button id="btn-logout" class="btn-logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M112,216a8,8,0,0,1-8,8H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h56a8,8,0,0,1,0,16H48V208h56A8,8,0,0,1,112,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L196.69,120H104a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,221.66,122.34Z"></path></svg>
+                    Keluar
+                </button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div class="page-titles">
+                    <h1>Laporan Keuangan Eksekutif</h1>
+                    <p>Pantau performa finansial institusi secara komprehensif.</p>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="header-actions">
+                    <div class="page-titles">
+                        <h1 style="font-size: 28px; margin-bottom: 8px;">Laporan Keuangan</h1>
+                        <p style="font-size: 14px;">Data historis dan proyeksi arus kas sekolah.</p>
+                    </div>
+                    <div style="display: flex; gap: 12px;">
+                        <button class="btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40V168h-8V216a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V168H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56h8V40a8,8,0,0,1,8-8H208A8,8,0,0,1,216,40ZM64,48v8h128V48Zm128,160V168H64v40ZM200,72H40v80h16V144a8,8,0,0,1,8-8H192a8,8,0,0,1,8,8v8h16Zm-24,32a12,12,0,1,0-12-12A12,12,0,0,0,176,104Z"></path></svg>
+                            Cetak PDF
+                        </button>
+                        <button class="btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40v88H152v80H56a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8H208A8,8,0,0,1,216,40ZM152,144h64l-64,64ZM144,80H80a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm0,32H80a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm-32,32H80a8,8,0,0,0,0,16h32a8,8,0,0,0,0-16Z"></path></svg>
+                            Ekspor Excel
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label>Rentang Tanggal</label>
+                        <div class="input-container no-arrow">
+                            <input type="date" class="input-control" value="2023-01-01">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sampai Tanggal</label>
+                        <div class="input-container no-arrow">
+                            <input type="date" class="input-control" value="2023-12-31">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tipe Laporan</label>
+                        <div class="input-container">
+                            <select class="input-control">
+                                <option value="bulanan">Bulanan</option>
+                                <option value="tahunan" selected>Tahunan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <button class="btn-primary" style="width: 100%; justify-content: center; padding: 13px 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M200,136a8,8,0,0,1-8,8H64a8,8,0,0,1,0-16H192A8,8,0,0,1,200,136Zm32-56H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16Zm-80,96H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16Z"></path></svg>
+                            Terapkan Filter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="summary-grid three-cols">
+                    <div class="summary-card" style="border-left: 4px solid var(--green-text);">
+                        <div class="card-icon" style="background-color: var(--green-bg); color: var(--green-text);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M237.66,106.34a8,8,0,0,1-11.32,0L176,55.31V216a8,8,0,0,1-16,0V55.31L109.66,106.34a8,8,0,0,1-11.32-11.32l64-64a8,8,0,0,1,11.32,0l64,64A8,8,0,0,1,237.66,106.34Z"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-title">Total Pemasukan</p>
+                            <h3 class="card-value">Rp 450.250.000</h3>
+                            <span class="card-change text-green">↑ 12.5% dari tahun lalu</span>
+                        </div>
+                    </div>
+                    <div class="summary-card" style="border-left: 4px solid var(--red-text);">
+                        <div class="card-icon" style="background-color: var(--red-bg); color: var(--red-text);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M237.66,149.66l-64,64a8,8,0,0,1-11.32,0l-64-64a8,8,0,0,1,11.32-11.32L160,188.69V40a8,8,0,0,1,16,0V188.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-title">Total Pengeluaran</p>
+                            <h3 class="card-value">Rp 312.800.000</h3>
+                            <span class="card-change text-red">↑ 4.3% dari tahun lalu</span>
+                        </div>
+                    </div>
+                    <div class="summary-card" style="border-left: 4px solid var(--navy-blue);">
+                        <div class="card-icon" style="background-color: var(--blue-bg); color: var(--navy-blue);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H24V100a36.06,36.06,0,0,1,32-35.83V40a8,8,0,0,1,16,0v24.17A36.06,36.06,0,0,1,104,100V200h48V100a36.06,36.06,0,0,1,32-35.83V40a8,8,0,0,1,16,0v24.17A36.06,36.06,0,0,1,232,100V200h8A8,8,0,0,1,248,208ZM88,100v16H40V100a20,20,0,0,1,40,0ZM40,184H88V132H40Zm176-84a20,20,0,0,0-40,0v16h48Zm0,84V132H168v52Z"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-title">Selisih (Net)</p>
+                            <h3 class="card-value">Rp 137.450.000</h3>
+                            <span class="card-change text-green">✓ Kondisi Sehat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-grid">
+                    <div class="chart-card">
+                        <h3>Komparasi Tahunan</h3>
+                        <div class="chart-legend">
+                            <div class="chart-legend-item">
+                                <div class="chart-legend-color" style="background-color: var(--navy-blue);"></div>
+                                Pemasukan
+                            </div>
+                            <div class="chart-legend-item">
+                                <div class="chart-legend-color" style="background-color: var(--red-text);"></div>
+                                Pengeluaran
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="background-color: var(--navy-blue); height: 40%;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 30%;"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="background-color: var(--navy-blue); height: 60%;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 45%;"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="background-color: var(--navy-blue); height: 50%;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 35%;"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="background-color: var(--navy-blue); height: 80%;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 65%;"></div>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar" style="background-color: var(--navy-blue); height: 95%;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 55%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>2019</span>
+                            <span>2020</span>
+                            <span>2021</span>
+                            <span>2022</span>
+                            <span>2023</span>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <h3>Sumber Pemasukan (YTD)</h3>
+                        <div class="source-item">
+                            <div class="source-header">
+                                <span>SPP Siswa</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 65%; background-color: var(--navy-blue);"></div>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-header">
+                                <span>Dana BOS</span>
+                                <span>25%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 25%; background-color: #3B82F6;"></div>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-header">
+                                <span>Donasi / Lainnya</span>
+                                <span>10%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 10%; background-color: #93C5FD;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
