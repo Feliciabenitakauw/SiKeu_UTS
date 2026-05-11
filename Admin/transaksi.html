@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Transaksi - SiKeu Sekolah</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="page-admin">
+    <div class="admin-layout">
+                <aside class="sidebar">
+            <a href="admin.html" class="sidebar-header" style="text-decoration: none; color: inherit;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M240,208H224V104a8,8,0,0,0-8-8H40a8,8,0,0,0-8,8V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16Zm-32,0H168V112h40ZM104,112h48v96H104ZM48,112H88v96H48ZM236.42,72.6l-104-56a8,8,0,0,0-7.55,0l-105,56.55A8,8,0,0,0,24,88H232a8,8,0,0,0,4.42-15.4ZM128,34.42,207.25,72H48.06Z"></path></svg>
+                <h2>SiKeu Sekolah</h2>
+            </a>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="admin.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path></svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="manajemen-spp.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM56,72h24a8,8,0,0,1,0,16H56a8,8,0,0,1,0-16Zm48,96H56a8,8,0,0,1,0-16h48a8,8,0,0,1,0,16Zm48-32H56a8,8,0,0,1,0-16H152a8,8,0,0,1,0,16Zm48,0a12,12,0,1,1,12-12A12,12,0,0,1,200,136Zm0-40a12,12,0,1,1,12-12A12,12,0,0,1,200,96Z"></path></svg>
+                            Manajemen SPP
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="transaksi.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M24,104A24,24,0,0,1,48,80H208a24,24,0,0,1,24,24v64a24,24,0,0,1-24,24H48a24,24,0,0,1-24-24Zm24,40a16,16,0,1,0-16-16A16,16,0,0,0,48,144Zm80-32a16,16,0,1,0,16,16A16,16,0,0,0,128,112Zm80,32a16,16,0,1,0-16-16A16,16,0,0,0,208,144Z"></path></svg>
+                            Transaksi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="laporan.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H168a8,8,0,0,1-8-8V40a8,8,0,0,1,16,0v80h40A8,8,0,0,1,224,128Zm-88,88H40a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-64H40a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-64H40a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16ZM224,184a8,8,0,0,1-8,8H184v32a8,8,0,0,1-16,0V184a8,8,0,0,1,8-8h40A8,8,0,0,1,224,184Z"></path></svg>
+                            Laporan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pengaturan.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.61a89.21,89.21,0,0,0-14.61-14.61l-2.61-23.72a8,8,0,0,0-3.93-6A107.21,107.21,0,0,0,144.39,11.14a8,8,0,0,0-7.06,1.48L118.69,27.54q-2.16-.06-4.32,0L95.73,12.62a8,8,0,0,0-7.06-1.48,107.21,107.21,0,0,0-26.25,10.88,8,8,0,0,0-3.93,6l-2.61,23.72A89.21,89.21,0,0,0,41.27,66.35L17.55,69a8,8,0,0,0-6,3.93,107.21,107.21,0,0,0-10.88,26.25,8,8,0,0,0,1.48,7.06L17.08,124.9q-.06,2.16,0,4.32l-14.92,18.64a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.61a89.21,89.21,0,0,0,14.61,14.61l2.61,23.72a8,8,0,0,0,3.93,6A107.21,107.21,0,0,0,88.67,243.38a8,8,0,0,0,7.06-1.48l18.64-14.92q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.61-23.72a89.21,89.21,0,0,0,14.61-14.61l23.72-2.61a8,8,0,0,0,6-3.93,107.21,107.21,0,0,0,10.88-26.25,8,8,0,0,0-1.48-7.06Zm-41.26,50.11a73.23,73.23,0,0,1-23.41,23.41l-2.14,19.46a91.31,91.31,0,0,1-19,7.92l-15.3-12.24a71.82,71.82,0,0,1-27.42,0L84.22,230.9a91.31,91.31,0,0,1-19-7.92L63.12,203.52a73.23,73.23,0,0,1-23.41-23.41L20.25,178a91.31,91.31,0,0,1-7.92-19l12.24-15.3a71.82,71.82,0,0,1,0-27.42L12.33,101A91.31,91.31,0,0,1,20.25,82l19.46-2.14a73.23,73.23,0,0,1,23.41-23.41l2.14-19.46a91.31,91.31,0,0,1,19-7.92l15.3,12.24a71.82,71.82,0,0,1,27.42,0l12.24-15.3a91.31,91.31,0,0,1,19,7.92l-2.14,19.46a73.23,73.23,0,0,1,23.41,23.41L239.9,82a91.31,91.31,0,0,1,7.92,19l-12.24,15.3a71.82,71.82,0,0,1,0,27.42l12.24,15.3a91.31,91.31,0,0,1-7.92,19Z"></path></svg>
+                            Pengaturan
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=3B82F6&color=fff" alt="Avatar" class="admin-avatar">
+                    <div class="admin-info">
+                        <span class="admin-name">Budi Santoso</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+                <button id="btn-logout" class="btn-logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M112,216a8,8,0,0,1-8,8H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h56a8,8,0,0,1,0,16H48V208h56A8,8,0,0,1,112,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L196.69,120H104a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,221.66,122.34Z"></path></svg>
+                    Keluar
+                </button>
+            </div>
+        </aside>
+                <main class="main-content">
+                        <header class="topbar">
+                <div class="page-header-back">
+                    <button class="btn-back" onclick="window.location.href='admin.html'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+                    </button>
+                    <h1 style="font-size: 20px; font-weight: 700; color: var(--navy-blue);">Tambah Transaksi</h1>
+                </div>
+                <div class="topbar-actions">
+                    <button class="btn-bell" aria-label="Notifikasi">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,176H40a8,8,0,0,1-5.66-13.66l22.08-22.07A87.94,87.94,0,0,0,80,78V72a48,48,0,0,1,96,0v6a87.94,87.94,0,0,0,23.58,62.27l22.08,22.07A8,8,0,0,1,216,176ZM104,192a24,24,0,0,0,48,0H104Z"></path></svg>
+                        <span class="bell-badge"></span>
+                    </button>
+                    <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=3B82F6&color=fff" alt="Profile" class="topbar-avatar">
+                </div>
+            </header>
+                        <div class="content-area">
+                <div class="panel-centered">
+                                        <div class="breadcrumb">
+                        <a href="admin.html">Dashboard</a>
+                        <span class="separator">❯</span>
+                        <span class="current">Transaksi Baru</span>
+                    </div>
+                                        <div class="panel">
+                        <div class="panel-header">
+                            <h2>Detail Transaksi</h2>
+                            <p>Silakan lengkapi formulir di bawah ini untuk mencatat transaksi keuangan sekolah.</p>
+                        </div>
+                        <div class="panel-body">
+                                                        <form id="form-transaksi-baru">
+                                <div class="form-group">
+                                    <label>Tanggal Transaksi <span class="text-danger">*</span></label>
+                                    <div class="input-container no-arrow">
+                                        <input type="date" class="input-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Jenis <span class="text-danger">*</span></label>
+                                    <div class="input-container">
+                                        <select class="input-control" required>
+                                            <option value="" disabled selected>Pilih Jenis</option>
+                                            <option value="masuk">Pemasukan</option>
+                                            <option value="keluar">Pengeluaran</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Kategori <span class="text-danger">*</span></label>
+                                    <div class="input-container">
+                                        <select class="input-control" required>
+                                            <option value="" disabled selected>Pilih Kategori</option>
+                                            <option value="spp">Pembayaran SPP</option>
+                                            <option value="operasional">Biaya Operasional</option>
+                                            <option value="sarpras">Sarana Prasarana</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Jumlah <span class="text-danger">*</span></label>
+                                    <div class="input-container no-arrow">
+                                        <span class="prefix-rp">Rp</span>
+                                        <input type="number" class="input-control pl-rp" placeholder="0" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Keterangan</label>
+                                    <textarea class="input-control" placeholder="Masukkan detail tambahan tentang transaksi ini..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Bukti Pembayaran</label>
+                                    <div class="upload-box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-42.34-77.66a8,8,0,0,1-11.32,0L136,127.31V184a8,8,0,0,1-16,0V127.31l-10.34,11.03a8,8,0,0,1-11.32-11.32l24-24a8,8,0,0,1,11.32,0l24,24A8,8,0,0,1,157.66,138.34Z"></path></svg>
+                                        <h4>Klik untuk unggah atau seret file</h4>
+                                        <p>PNG, JPG, PDF (Maks. 5MB)</p>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="btn-cancel" onclick="window.location.href='admin.html'">Batal</button>
+                                    <button type="submit" class="btn-save">Simpan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                                        <div class="alert-info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"></path></svg>
+                        <p><strong>Catatan Keamanan:</strong> Semua transaksi yang disimpan akan melalui proses audit otomatis. Pastikan data yang dimasukkan sudah sesuai dengan bukti fisik yang dilampirkan.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
