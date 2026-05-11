@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistik - SiKeu Sekolah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="page-kepsek">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a href="kepsek.html" class="sidebar-header" style="text-decoration: none; color: inherit;">
+                <div class="logo-outer" style="width: 40px; height: 40px; border-radius: 8px;">
+                    <div class="logo-inner" style="width: 28px; height: 28px; border-radius: 6px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path></svg>
+                    </div>
+                </div>
+                <h2>SiKeu Sekolah</h2>
+            </a>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="kepsek.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path></svg>
+                            Dashboard Utama
+                        </a>
+                    </li>
+                    <li>
+                        <a href="laporan.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm-96,16a32,32,0,1,1-32,32A32,32,0,0,1,120,56ZM192,184H48V168c0-22.09,26.86-40,60-40a25.26,25.26,0,0,1,12,3,25.26,25.26,0,0,1,12-3c33.14,0,60,17.91,60,40Z"></path></svg>
+                            Laporan Keuangan
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="statistik.html">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM88,144a16,16,0,1,1,16-16A16,16,0,0,1,88,144Z"></path></svg>
+                            Statistik
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <img src="https://ui-avatars.com/api/?name=Ahmad+Dahlan&background=3B82F6&color=fff" alt="Avatar" class="admin-avatar">
+                    <div class="admin-info">
+                        <span class="admin-name">Ahmad Dahlan</span>
+                        <span class="admin-role">Kepala Sekolah</span>
+                    </div>
+                </div>
+                <button id="btn-logout" class="btn-logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M112,216a8,8,0,0,1-8,8H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h56a8,8,0,0,1,0,16H48V208h56A8,8,0,0,1,112,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L196.69,120H104a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,221.66,122.34Z"></path></svg>
+                    Keluar
+                </button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div class="page-titles">
+                    <h1>Statistik & Analisis Keuangan</h1>
+                    <p>Visualisasi data untuk mendukung pengambilan keputusan strategis.</p>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="header-actions">
+                    <div class="page-titles">
+                        <h1 style="font-size: 28px; margin-bottom: 8px;">Dashboard Analitik</h1>
+                        <p style="font-size: 14px;">Tinjauan kinerja finansial tahun akademik 2023/2024.</p>
+                    </div>
+                    <div class="filter-bar" style="background: transparent; border: none; padding: 0;">
+                        <select class="filter-select" style="min-width: 200px;">
+                            <option value="2023-2024">Tahun Ajaran 2023/2024</option>
+                            <option value="2022-2023">Tahun Ajaran 2022/2023</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="summary-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="summary-card">
+                        <div class="icon-box bg-blue-soft">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M240,208H224V136a8,8,0,0,0-8-8H168a8,8,0,0,0-8,8v72H112V88a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V208H32a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM96,208H64V96H96Zm64,0H128V144h32Zm48,0H176V144h32Z"></path></svg>
+                        </div>
+                        <div class="card-details">
+                            <h3>Pertumbuhan Aset</h3>
+                            <div class="card-value text-green" style="font-size: 28px;">+18.5%</div>
+                            <div class="card-trend text-green">
+                                <span>Dari periode sebelumnya</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="icon-box bg-green-soft">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,104a8,8,0,0,1-8,8H200v32a8,8,0,0,1-16,0V112H152a8,8,0,0,1,0-16h32V64a8,8,0,0,1,16,0V96h24A8,8,0,0,1,232,104ZM96,16A80,80,0,1,0,176,96,80.09,80.09,0,0,0,96,16Zm0,144A64,64,0,1,1,160,96,64.07,64.07,0,0,1,96,160Z"></path></svg>
+                        </div>
+                        <div class="card-details">
+                            <h3>Kepatuhan Bayar SPP</h3>
+                            <div class="card-value text-blue" style="font-size: 28px;">92.3%</div>
+                            <div class="card-trend text-blue">
+                                <span>Dari total 1.250 siswa aktif</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="icon-box bg-red-soft">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,208a8,8,0,0,1-16,0V56a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8V208a8,8,0,0,1-16,0V56A24,24,0,0,1,48,32H208a24,24,0,0,1,24,24Zm-40-72a8,8,0,0,0-8-8H72a8,8,0,0,0,0,16H184A8,8,0,0,0,192,136Zm0-48a8,8,0,0,0-8-8H72a8,8,0,0,0,0,16H184A8,8,0,0,0,192,88Z"></path></svg>
+                        </div>
+                        <div class="card-details">
+                            <h3>Rasio Biaya Operasional</h3>
+                            <div class="card-value text-red" style="font-size: 28px;">45%</div>
+                            <div class="card-trend text-red">
+                                <span>Terhadap total pendapatan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-grid">
+                    <div class="chart-card" style="grid-column: span 2;">
+                        <h3 style="margin-bottom: 24px;">Tren Pendapatan vs Pengeluaran (6 Bulan Terakhir)</h3>
+                        <div class="chart-legend" style="margin-bottom: 16px;">
+                            <div class="chart-legend-item">
+                                <div class="chart-legend-color" style="background-color: var(--green-text);"></div>
+                                Pemasukan
+                            </div>
+                            <div class="chart-legend-item">
+                                <div class="chart-legend-color" style="background-color: var(--red-text);"></div>
+                                Pengeluaran
+                            </div>
+                        </div>
+                        <div class="chart-placeholder" style="height: 300px; padding: 0; background: none; border: none; align-items: flex-end;">
+                            <div class="chart-bar-group" style="height: 100%;">
+                                <div class="chart-bar" style="background-color: var(--green-text); height: 50%; border-radius: 4px 4px 0 0;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 40%; border-radius: 4px 4px 0 0;"></div>
+                            </div>
+                            <div class="chart-bar-group" style="height: 100%;">
+                                <div class="chart-bar" style="background-color: var(--green-text); height: 55%; border-radius: 4px 4px 0 0;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 42%; border-radius: 4px 4px 0 0;"></div>
+                            </div>
+                            <div class="chart-bar-group" style="height: 100%;">
+                                <div class="chart-bar" style="background-color: var(--green-text); height: 45%; border-radius: 4px 4px 0 0;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 45%; border-radius: 4px 4px 0 0;"></div>
+                            </div>
+                            <div class="chart-bar-group" style="height: 100%;">
+                                <div class="chart-bar" style="background-color: var(--green-text); height: 65%; border-radius: 4px 4px 0 0;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 50%; border-radius: 4px 4px 0 0;"></div>
+                            </div>
+                            <div class="chart-bar-group" style="height: 100%;">
+                                <div class="chart-bar" style="background-color: var(--green-text); height: 80%; border-radius: 4px 4px 0 0;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 55%; border-radius: 4px 4px 0 0;"></div>
+                            </div>
+                            <div class="chart-bar-group" style="height: 100%;">
+                                <div class="chart-bar" style="background-color: var(--green-text); height: 95%; border-radius: 4px 4px 0 0;"></div>
+                                <div class="chart-bar" style="background-color: var(--red-text); height: 60%; border-radius: 4px 4px 0 0;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-labels" style="margin-top: 12px; font-weight: 500; color: var(--text-muted);">
+                            <span>Des</span>
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>Mei</span>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3 style="margin-bottom: 24px;">Distribusi Pengeluaran</h3>
+                        <div class="source-item" style="margin-bottom: 20px;">
+                            <div class="source-header">
+                                <span style="font-weight: 600;">Gaji Guru & Staf</span>
+                                <span style="font-weight: 600;">45%</span>
+                            </div>
+                            <div class="progress-track" style="height: 10px; border-radius: 5px;">
+                                <div class="progress-fill" style="width: 45%; background-color: var(--navy-blue); border-radius: 5px;"></div>
+                            </div>
+                        </div>
+                        <div class="source-item" style="margin-bottom: 20px;">
+                            <div class="source-header">
+                                <span style="font-weight: 600;">Sarana & Prasarana</span>
+                                <span style="font-weight: 600;">30%</span>
+                            </div>
+                            <div class="progress-track" style="height: 10px; border-radius: 5px;">
+                                <div class="progress-fill" style="width: 30%; background-color: var(--red-text); border-radius: 5px;"></div>
+                            </div>
+                        </div>
+                        <div class="source-item" style="margin-bottom: 20px;">
+                            <div class="source-header">
+                                <span style="font-weight: 600;">Kegiatan Siswa</span>
+                                <span style="font-weight: 600;">15%</span>
+                            </div>
+                            <div class="progress-track" style="height: 10px; border-radius: 5px;">
+                                <div class="progress-fill" style="width: 15%; background-color: #F59E0B; border-radius: 5px;"></div>
+                            </div>
+                        </div>
+                        <div class="source-item" style="margin-bottom: 20px;">
+                            <div class="source-header">
+                                <span style="font-weight: 600;">Lain-lain</span>
+                                <span style="font-weight: 600;">10%</span>
+                            </div>
+                            <div class="progress-track" style="height: 10px; border-radius: 5px;">
+                                <div class="progress-fill" style="width: 10%; background-color: #9CA3AF; border-radius: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
